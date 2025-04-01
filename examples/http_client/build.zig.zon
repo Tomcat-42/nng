@@ -1,0 +1,20 @@
+.{
+    .name = .http_client,
+    .version = "0.1.0",
+    .fingerprint = 0xdc36dc9224e1f888, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.14.0",
+
+    .dependencies = .{
+        .nng = .{
+            .url = "../../",
+            .hash = "nng_zig-2.0.0-alpha.4-qI1s3tNyAAAH6T9XLSjX1uqt9kNbUuxfztjIhfVGCsjB",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "LICENSE",
+        "README.md",
+    },
+}
