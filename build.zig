@@ -63,7 +63,6 @@ pub fn build(b: *Build) !void {
     const optimize = b.standardOptimizeOption(.{});
     const upstream = b.dependency("nng", .{});
     const nng_mod = b.addModule("nng", .{
-        .root_source_file = b.path("src/nng.zig"),
         .target = target,
         .optimize = optimize,
         .link_libc = true,
