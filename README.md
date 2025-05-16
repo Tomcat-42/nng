@@ -32,13 +32,3 @@ const nng = @cImport({
     @cInclude("nng/http.h");
 });
 ```
-
-Or alternatively, the `src/nng.zig` file exported as the `nng` module in the package
-already do this for you:
-
-```zig
-const nng = b.dependency("nng", .{ .optimize = optimize, .target = target }).module("nng");
-compile_target.addImport("nng", nng);
-```
-
-See the `examples/` folder for more usage cases.

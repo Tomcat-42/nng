@@ -63,7 +63,6 @@ pub fn build(b: *Build) !void {
     const optimize = b.standardOptimizeOption(.{});
     const upstream = b.dependency("nng", .{});
     const nng_mod = b.addModule("nng", .{
-        .root_source_file = b.path("src/nng.zig"),
         .target = target,
         .optimize = optimize,
         .link_libc = true,
@@ -449,7 +448,6 @@ pub fn build(b: *Build) !void {
         .name = "nng",
         .root_module = nng_mod,
         .linkage = if (BUILD_SHARED_LIBS) .dynamic else .static,
-        .use_lld = true,
     });
 
     // Install
