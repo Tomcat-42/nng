@@ -448,7 +448,6 @@ pub fn build(b: *Build) !void {
         .name = "nng",
         .root_module = nng_mod,
         .linkage = if (BUILD_SHARED_LIBS) .dynamic else .static,
-        .use_lld = true,
     });
 
     // Install
